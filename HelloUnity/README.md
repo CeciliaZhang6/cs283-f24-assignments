@@ -1,4 +1,22 @@
-Assignment 3 - Level Design
+## Assignment 4 - Flythrough Tour
+
+Demo: https://drive.google.com/file/d/1xOIjqcbTR61n8sgbFIAKLKNTJVvrHwKZ/view?usp=sharing
+
+How to control: 
+
+character movements: WASD, mouse rotation. 
+
+(Note: character moves towards the direction the mouse is pointing.)
+
+Waypoint (POI): "N" key to go to next POI. 
+
+List of POI: home --> quest --> boss --> home
+
+Credits: 
+
+Model is from standard asset. 
+
+## Assignment 3 - Level Design
 
 ![屏幕截图 2024-09-20 234517](https://github.com/user-attachments/assets/87fff4e7-036e-4c69-bc2a-8a80949d0951)
 
