@@ -1,3 +1,19 @@
+## Assignment 6 - Bezier Faster Stronger
+
+Follow Path Linear (press L)
+
+![FollowPathLinear](https://github.com/user-attachments/assets/bab032f9-0648-4fa9-acb0-7167412850b0)
+
+Follow Path Cubic (press C)
+
+![FollowPathCubic](https://github.com/user-attachments/assets/5c074b4d-2803-407c-89e7-6443e5d5d196)
+
+GazeController
+
+![GazeController](https://github.com/user-attachments/assets/1d6c50fd-ef0b-4b0b-9a00-e2c9113b7ecd)
+
+Two-Link Controller
+
 ## Assignment 5 - Spring into action
 
 Rigid: https://drive.google.com/file/d/1YPp_bR8EwUi_aVEyUAj_AD47-7o3VrKm/view?usp=sharing
