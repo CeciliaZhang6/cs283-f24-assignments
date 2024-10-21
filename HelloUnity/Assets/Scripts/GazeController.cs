@@ -3,7 +3,7 @@ using UnityEngine;
 public class GazeController : MonoBehaviour
 {
     public Transform target;            // gaze target
-    public Transform lookJoint;         // head joint (used Ethan's glass in my character - can't find his head)
+    public Transform lookJoint;         // head joint (used Ethan's body in my character - can't find his head)
 
     void Update()
     {
