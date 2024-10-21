@@ -3813,7 +3813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 644546689}
   endEffector: {fileID: 1189086033}
-  bendAxis: {x: 0, y: 1, z: 0}
+  bendAxis: {x: 0, y: 0, z: 1}
 --- !u!1 &558659430
 GameObject:
   m_ObjectHideFlags: 0
