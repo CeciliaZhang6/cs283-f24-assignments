@@ -9,7 +9,7 @@ public class FollowPathLinear : MonoBehaviour
 
     private int currentPointIndex = 0;  
     private bool isMoving = false;      
-    private Vector3 initialPosition;    /
+    private Vector3 initialPosition;    
     private Quaternion initialRotation; 
     private Coroutine movementCoroutine;
 
