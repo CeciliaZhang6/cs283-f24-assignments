@@ -10,10 +10,16 @@ public class PlayerControls : MonoBehaviour
         // transformation for moving
         if (Input.GetKey(KeyCode.W))
         {
+            if(Input.GetKey(KeyCode.LeftShift)){
+                moveSpeed = 10f;
+            }
             transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
         }
         else if (Input.GetKey(KeyCode.S))
         {
+            if(Input.GetKey(KeyCode.LeftShift)){
+                moveSpeed = 10f;
+            }
             transform.Translate(-Vector3.forward * moveSpeed * Time.deltaTime);
         }
 
