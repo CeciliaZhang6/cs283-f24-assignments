@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject collectablePrefab; // Template for the collectable
-    public float spawnRange = 5f;        // Spawn range around the spawner
-    public int maxSpawns = 10;           // Maximum number of collectables to have in the scene
+    public GameObject collectablePrefab; 
+    public float spawnRange = 5f;        // spawn range around spawner
+    public int maxSpawns = 10;           
 
-    private int currentSpawnCount = 0;   // Tracks the number of currently active collectables
+    private int currentSpawnCount = 0;  
 
     private void Start()
     {
-        // Initial spawning of collectable objects
+        // initial spawning
         for (int i = 0; i < maxSpawns; i++)
         {
             SpawnCollectable();
@@ -19,7 +19,7 @@ public class Spawner : MonoBehaviour
 
     private void Update()
     {
-        // Continuously check and spawn new collectables up to maxSpawns
+        // check and spawn new collectables
         if (currentSpawnCount < maxSpawns)
         {
             SpawnCollectable();
@@ -28,28 +28,25 @@ public class Spawner : MonoBehaviour
 
     private void SpawnCollectable()
     {
-        // Generate a new random position within the range for each spawn
-        Vector3 spawnPosition = GetRandomPositionWithinRange();
+        // random position for each spawn
+        Vector3 spawnPosition = GetRandomSpawn();
 
-        // Adjust position based on collider bounds to sit on terrain
         Collider collider = collectablePrefab.GetComponent<Collider>();
         if (collider != null)
         {
             spawnPosition.y += collider.bounds.extents.y;
         }
 
-        // Instantiate a new collectable object at the computed position
+        // spawn
         Instantiate(collectablePrefab, spawnPosition, Quaternion.identity);
         currentSpawnCount++;
     }
 
-    private Vector3 GetRandomPositionWithinRange()
+    private Vector3 GetRandomSpawn()
     {
-        // Generate random X and Z positions within the specified range
         float randomX = Random.Range(-spawnRange, spawnRange);
         float randomZ = Random.Range(-spawnRange, spawnRange);
 
-        // Calculate the final position using the spawner's position as the center
         return new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
     }
 }
