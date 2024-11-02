@@ -1,5 +1,6 @@
 ## Assignment 8 - Collection Game
 
+![A08](https://github.com/user-attachments/assets/7e4e3809-f208-4511-ad27-b6492371b166)
 
 ## Assignment 7 - Motion and Collision
 
