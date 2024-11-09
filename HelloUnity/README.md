@@ -1,5 +1,6 @@
 ## Assignment 9 - Wander
 
+![A09](https://github.com/user-attachments/assets/11e4259d-b291-467b-9888-9bee2951655d)
 
 ## Assignment 8 - Collection Game
 
