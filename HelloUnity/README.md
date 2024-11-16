@@ -1,3 +1,29 @@
+## Assignment 10 - Behavior
+
+minion demo: 
+
+https://drive.google.com/file/d/1opN0VFze7xYI3b9HK-SID6_H2cXcaVdJ/view?usp=sharing
+
+notes: 
+
+attack = spwaning projectiles, but projectiles still need some work to let it "shoot"
+
+retreat = when player goes near campfile (safe zone), go back to NPC home point
+
+follow = when player out of range but not yet in safe zone
+
+
+unique demo (healing pylon): 
+
+https://drive.google.com/file/d/1kGJ1d6_V7bySLWA1F6PfXXvJFfw2xc7k/view?usp=sharing
+
+
+sources: 
+
+helpful article: https://discussions.unity.com/t/enabling-ui-panel-after-x-amount-of-seconds/692220/3
+
+new texture: https://www.freepik.com/free-photo/beautiful-green-texture-with-raindrops_3679933.htm#fromView=keyword&page=1&position=8&uuid=d80c23f4-c90f-4b8e-8fc6-911ffddf0192
+
 ## Assignment 9 - Wander
 
 ![A09](https://github.com/user-attachments/assets/11e4259d-b291-467b-9888-9bee2951655d)
