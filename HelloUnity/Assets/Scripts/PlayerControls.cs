@@ -2,31 +2,36 @@ using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
 {
-    public float moveSpeed = 5f;  // speed for forward/backward movement
-    public float turnSpeed = 100f;  // speed for turning left/right
+    public float moveSpeed = 5f;  // Speed for forward/backward movement
+    public float turnSpeed = 100f;  // Speed for turning left/right
 
     void Update()
     {
-        // transformation for moving
+        // Adjust move speed based on LeftShift
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            moveSpeed = 10f;
+        }
+        else
+        {
+            moveSpeed = 5f;
+        }
+
+        // Moving forward/backward
         if (Input.GetKey(KeyCode.W))
         {
-            if(Input.GetKey(KeyCode.LeftShift)){
-                moveSpeed = 10f;
-            }
-            transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+            transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime, Space.Self);
+            Debug.Log("Position after W: " + transform.position);
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            if(Input.GetKey(KeyCode.LeftShift)){
-                moveSpeed = 10f;
-            }
-            transform.Translate(-Vector3.forward * moveSpeed * Time.deltaTime);
+            transform.Translate(-Vector3.forward * moveSpeed * Time.deltaTime, Space.Self);
+            Debug.Log("Position after S: " + transform.position);
         }
 
-        // transformation for turning
+        // Turning left/right
         if (Input.GetKey(KeyCode.A))
         {
- 
             Quaternion turnLeft = Quaternion.Euler(0, -turnSpeed * Time.deltaTime, 0);
             transform.rotation = transform.rotation * turnLeft;
         }
@@ -36,7 +41,7 @@ public class PlayerControls : MonoBehaviour
             transform.rotation = transform.rotation * turnRight;
         }
 
-        // prevent rotation falling over
+        // Prevent tilting
         Vector3 currentRotation = transform.rotation.eulerAngles;
         transform.rotation = Quaternion.Euler(0, currentRotation.y, 0);
     }

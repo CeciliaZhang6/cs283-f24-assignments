@@ -2,63 +2,105 @@ using UnityEngine;
 
 public class PlayerMotionController : MonoBehaviour
 {
-    public Animator animator; 
-    public float walkSpeed = 5.0f;
-    public float runSpeed = 10.0f;
-    public float gravity = -9.81f; 
-    public float gravityMultiplier = 2.0f; 
+    public bool isGrounded;           // Tracks if the player is grounded
+    public float groundCheckDistance;
+    public LayerMask groundMask;
+    public float gravity = -9.81f;   // Gravity value for downward force
 
-    private CharacterController characterController; 
-    private Vector3 movement;
-    private float verticalVelocity; 
+    public float walkSpeed = 10.0f;         // Walking speed
+    public float runSpeed = 20.0f;         // Running speed
+    public float turnSpeed = 200f;         // Rotation speed in degrees per second
+    public float moveSpeed = 0.0f;         // Current movement speed
+    public float jumpHeight;
+    public float mouseSense; 
+    public Animator animator;              // Animator for controlling animations
+
+    private CharacterController controller; // Reference to the CharacterController
+    private Vector3 moveDirection;
+    private Vector3 velocity;               // keep track of gravity and jumping
+    
 
     void Start()
     {
+        // Get or add a CharacterController component
+        controller = GetComponent<CharacterController>();
+        if (controller == null)
+        {
+            controller = gameObject.AddComponent<CharacterController>();
+        }
+
+        // Ensure Animator is assigned
         if (animator == null)
         {
             animator = GetComponent<Animator>();
         }
-
-        characterController = GetComponent<CharacterController>();
     }
 
     void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-
-        movement = new Vector3(horizontal, 0, vertical).normalized;
-
-        // update animator params
-        float speed = movement.magnitude; 
-        bool isMoving = speed > 0.1f; 
-
-        animator.SetFloat("speed", speed);
-        animator.SetBool("isMoving", isMoving);
-
-        // do gravity if not grounded
-        if (!characterController.isGrounded)
-        {
-            verticalVelocity += gravity * gravityMultiplier * Time.deltaTime;
-        }
-        else
-        {
-            verticalVelocity = 0f; // reset
-        }
-
-        movement.y = verticalVelocity;
+        Move();
+        Rotate();
     }
 
-    void FixedUpdate()
-    {
-        if (movement.magnitude >= 0.1f || verticalVelocity != 0)
-        {
-            // identify walking or running speed
-            float currentSpeed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
-            Vector3 moveVelocity = movement * currentSpeed;
+    private void Move(){
+        isGrounded = Physics.CheckSphere(transform.position, groundCheckDistance, groundMask);
 
-            // move
-            characterController.Move(moveVelocity * Time.fixedDeltaTime);
+        // stop applying gravity when grounded
+        if(isGrounded && velocity.y < 0){
+            velocity.y = -2f;
         }
+
+        // W and S movements
+        float moveZ = Input.GetAxis("Vertical");
+        moveDirection = new Vector3(0, 0, moveZ);
+        moveDirection = transform.TransformDirection(moveDirection); // use player forward
+
+        if(isGrounded){
+            if(moveDirection != Vector3.zero && !Input.GetKey(KeyCode.LeftShift)){
+                // walk
+                moveSpeed = walkSpeed;
+                animator.SetFloat("speed", 0.5f);
+                animator.SetBool("isGrounded", isGrounded);
+                Debug.Log("0.5");
+                Debug.Log(isGrounded);
+            }
+            else if (moveDirection != Vector3.zero && Input.GetKey(KeyCode.LeftShift)){
+                // run
+                moveSpeed = runSpeed;
+                animator.SetFloat("speed", 1);
+                animator.SetBool("isGrounded", isGrounded);
+                Debug.Log("1");
+                Debug.Log(isGrounded);
+            }
+            else if (moveDirection == Vector3.zero){
+                // idle
+                moveSpeed = 0;
+                animator.SetFloat("speed", 0);
+                animator.SetBool("isGrounded", isGrounded);
+                Debug.Log("0");
+                Debug.Log(isGrounded);
+            }
+
+            // apply movement
+            moveDirection *= moveSpeed;
+            
+            if(Input.GetKeyDown(KeyCode.Space)){
+                velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+                animator.SetTrigger("jump");
+            }
+        }
+
+        controller.Move(moveDirection * Time.deltaTime);
+
+        // apply gravity
+        velocity.y += gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
+
     }
+
+    private void Rotate(){
+        float mouseX = Input.GetAxis("Mouse X") * mouseSense * Time.deltaTime;
+        transform.Rotate(Vector3.up, mouseX);
+    }
+
 }

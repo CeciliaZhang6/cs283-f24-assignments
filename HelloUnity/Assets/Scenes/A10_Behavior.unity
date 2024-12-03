@@ -3765,7 +3765,7 @@ MonoBehaviour:
   target: {fileID: 1572506333}
   horizontalDistance: 5
   verticalDistance: 5
-  cameraTiltAngle: -20
+  cameraTiltAngle: -21
 --- !u!114 &645291354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3778,7 +3778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e47ea36045fced4085a335dc7955621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1572506333}
   horizontalDistance: 5
   verticalDistance: 5
   springConstant: 50
@@ -5182,6 +5182,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d05d496cb4f43c14e80630addd23652e, type: 3}
       propertyPath: m_Name
       value: NPC_enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d05d496cb4f43c14e80630addd23652e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d05d496cb4f43c14e80630addd23652e, type: 3}
       propertyPath: m_TagString
@@ -12094,7 +12098,7 @@ GameObject:
   - component: {fileID: 2097342043}
   - component: {fileID: 2097342042}
   - component: {fileID: 2097342041}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12542,11 +12546,56 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3775294889287554766, guid: dae75e0a590aec9418ee786d8d658d02, type: 3}
+      propertyPath: runSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775294889287554766, guid: dae75e0a590aec9418ee786d8d658d02, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775294889287554766, guid: dae75e0a590aec9418ee786d8d658d02, type: 3}
+      propertyPath: turnSpeed
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775294889287554766, guid: dae75e0a590aec9418ee786d8d658d02, type: 3}
+      propertyPath: walkSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775294889287554766, guid: dae75e0a590aec9418ee786d8d658d02, type: 3}
+      propertyPath: isGrounded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775294889287554766, guid: dae75e0a590aec9418ee786d8d658d02, type: 3}
+      propertyPath: jumpHeight
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775294889287554766, guid: dae75e0a590aec9418ee786d8d658d02, type: 3}
+      propertyPath: mouseSense
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775294889287554766, guid: dae75e0a590aec9418ee786d8d658d02, type: 3}
+      propertyPath: groundMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775294889287554766, guid: dae75e0a590aec9418ee786d8d658d02, type: 3}
+      propertyPath: groundCheckDistance
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008711981109590870, guid: dae75e0a590aec9418ee786d8d658d02, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7008711981109590870, guid: dae75e0a590aec9418ee786d8d658d02, type: 3}
       propertyPath: turnSpeed
       value: 100
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8141239116775599509, guid: dae75e0a590aec9418ee786d8d658d02, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7008711981109590870, guid: dae75e0a590aec9418ee786d8d658d02, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

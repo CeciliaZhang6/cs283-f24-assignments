@@ -26,4 +26,6 @@ public class RigidFollowCamera : MonoBehaviour
             transform.rotation = rotation * Quaternion.Euler(cameraTiltAngle, 0, 0);
         }
     }
+
+    
 }
