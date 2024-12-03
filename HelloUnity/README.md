@@ -1,3 +1,19 @@
+## Final Project Log
+
+Implemented: 
+- character controls: mouse input for camera/character rotation, jump & sprint with animation
+- set up farm area with soils, lake, chests. 
+
+TODO:
+- farming system: planting seed, water plants, harvest. 
+- if have time: more types of plants (carrots, potatoes)
+
+
+Credits: 
+
+soil texture: <a href="https://www.freepik.com/free-photo/rough-stone-wall-texture_1124387.htm#fromView=keyword&page=1&position=0&uuid=460b80eb-9094-4845-bc97-6cbacdb9fd9c">Image by freepik</a>
+
+
 ## Assignment 10 - Behavior
 
 minion demo: 
