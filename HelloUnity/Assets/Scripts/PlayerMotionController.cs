@@ -61,24 +61,18 @@ public class PlayerMotionController : MonoBehaviour
                 moveSpeed = walkSpeed;
                 animator.SetFloat("speed", 0.5f);
                 animator.SetBool("isGrounded", isGrounded);
-                Debug.Log("0.5");
-                Debug.Log(isGrounded);
             }
             else if (moveDirection != Vector3.zero && Input.GetKey(KeyCode.LeftShift)){
                 // run
                 moveSpeed = runSpeed;
                 animator.SetFloat("speed", 1);
                 animator.SetBool("isGrounded", isGrounded);
-                Debug.Log("1");
-                Debug.Log(isGrounded);
             }
             else if (moveDirection == Vector3.zero){
                 // idle
                 moveSpeed = 0;
                 animator.SetFloat("speed", 0);
                 animator.SetBool("isGrounded", isGrounded);
-                Debug.Log("0");
-                Debug.Log(isGrounded);
             }
 
             // apply movement

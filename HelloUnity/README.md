@@ -4,15 +4,19 @@ Implemented:
 - character controls: mouse input for camera/character rotation, jump & sprint with animation
 - set up farm area with soils, lake, chests. 
 
-TODO:
-- farming system: planting seed, water plants, harvest. 
-- if have time: more types of plants (carrots, potatoes)
-
 
 Credits: 
 
 soil texture: <a href="https://www.freepik.com/free-photo/rough-stone-wall-texture_1124387.htm#fromView=keyword&page=1&position=0&uuid=460b80eb-9094-4845-bc97-6cbacdb9fd9c">Image by freepik</a>
 
+soil 2 texture: https://freestocktextures.com/texture/ground-soil-dries,725.html
+
+apple texture: https://www.freepik.com/free-photo/close-up-texture-pomegranate-fruit_26212148.htm#fromView=keyword&page=1&position=0&uuid=1ba7b629-8c5d-4b39-96a8-e8435fa182f5
+
+banana texture: https://i0.wp.com/texturefabrik.com/wp-content/uploads/2020/09/texturefabrik-com_bananas_01.jpg?ssl=1
+gold texture: https://www.freepik.com/free-vector/gradient-solid-gold-background_84549421.htm#fromView=search&page=1&position=25&uuid=b33c713c-7a5e-4033-ba2e-1c3338000ea8
+
+grape texture: Photo by Nick Collins: https://www.pexels.com/photo/purple-wall-color-1293006/
 
 ## Assignment 10 - Behavior
 
