@@ -485,10 +485,6 @@ MonoBehaviour:
   GrapePlantPrefab: {fileID: 3944997377983571419, guid: 1d3986994abb85f47bedc67a68bee7d4, type: 3}
   BananaPlantPrefab: {fileID: 5435375464778114299, guid: b68fdf51b4c783a4ca2ba237eeb1cfb4, type: 3}
   GoldenBananaPlantPrefab: {fileID: 5660291682269552555, guid: 56c9d718e2f83814a8ef5db375a146ae, type: 3}
-  appleHarvestablePrefab: {fileID: 8778440095716317687, guid: caa9696f2757a1d4aa11971630b61012, type: 3}
-  grapeHarvestablePrefab: {fileID: 8450692388437578749, guid: 5952b699fc9025a4a817bea7b074064d, type: 3}
-  bananaHarvestablePrefab: {fileID: 7064039599634863646, guid: c94472d6f34f3ea40811c9c7c5fb9180, type: 3}
-  goldenBananaHarvestablePrefab: {fileID: 5559560051358201650, guid: 9657e96f992504346905b6c2d4754907, type: 3}
 --- !u!65 &155378099
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -847,10 +843,6 @@ MonoBehaviour:
   GrapePlantPrefab: {fileID: 3944997377983571419, guid: 1d3986994abb85f47bedc67a68bee7d4, type: 3}
   BananaPlantPrefab: {fileID: 5435375464778114299, guid: b68fdf51b4c783a4ca2ba237eeb1cfb4, type: 3}
   GoldenBananaPlantPrefab: {fileID: 5660291682269552555, guid: 56c9d718e2f83814a8ef5db375a146ae, type: 3}
-  appleHarvestablePrefab: {fileID: 8778440095716317687, guid: caa9696f2757a1d4aa11971630b61012, type: 3}
-  grapeHarvestablePrefab: {fileID: 8450692388437578749, guid: 5952b699fc9025a4a817bea7b074064d, type: 3}
-  bananaHarvestablePrefab: {fileID: 7064039599634863646, guid: c94472d6f34f3ea40811c9c7c5fb9180, type: 3}
-  goldenBananaHarvestablePrefab: {fileID: 5559560051358201650, guid: 9657e96f992504346905b6c2d4754907, type: 3}
 --- !u!1001 &225902235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1265,10 +1257,6 @@ MonoBehaviour:
   GrapePlantPrefab: {fileID: 3944997377983571419, guid: 1d3986994abb85f47bedc67a68bee7d4, type: 3}
   BananaPlantPrefab: {fileID: 5435375464778114299, guid: b68fdf51b4c783a4ca2ba237eeb1cfb4, type: 3}
   GoldenBananaPlantPrefab: {fileID: 5660291682269552555, guid: 56c9d718e2f83814a8ef5db375a146ae, type: 3}
-  appleHarvestablePrefab: {fileID: 8778440095716317687, guid: caa9696f2757a1d4aa11971630b61012, type: 3}
-  grapeHarvestablePrefab: {fileID: 8450692388437578749, guid: 5952b699fc9025a4a817bea7b074064d, type: 3}
-  bananaHarvestablePrefab: {fileID: 7064039599634863646, guid: c94472d6f34f3ea40811c9c7c5fb9180, type: 3}
-  goldenBananaHarvestablePrefab: {fileID: 5559560051358201650, guid: 9657e96f992504346905b6c2d4754907, type: 3}
 --- !u!65 &288260673
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1577,7 +1565,7 @@ Transform:
   m_GameObject: {fileID: 645291345}
   serializedVersion: 2
   m_LocalRotation: {x: -0.012696335, y: -0.39201424, z: -0.0054107895, w: 0.91985565}
-  m_LocalPosition: {x: 927.81, y: 12.51, z: 205.46}
+  m_LocalPosition: {x: 930.9, y: 11.1, z: 208.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3122,10 +3110,6 @@ MonoBehaviour:
   GrapePlantPrefab: {fileID: 3944997377983571419, guid: 1d3986994abb85f47bedc67a68bee7d4, type: 3}
   BananaPlantPrefab: {fileID: 5435375464778114299, guid: b68fdf51b4c783a4ca2ba237eeb1cfb4, type: 3}
   GoldenBananaPlantPrefab: {fileID: 5660291682269552555, guid: 56c9d718e2f83814a8ef5db375a146ae, type: 3}
-  appleHarvestablePrefab: {fileID: 8778440095716317687, guid: caa9696f2757a1d4aa11971630b61012, type: 3}
-  grapeHarvestablePrefab: {fileID: 8450692388437578749, guid: 5952b699fc9025a4a817bea7b074064d, type: 3}
-  bananaHarvestablePrefab: {fileID: 7064039599634863646, guid: c94472d6f34f3ea40811c9c7c5fb9180, type: 3}
-  goldenBananaHarvestablePrefab: {fileID: 5559560051358201650, guid: 9657e96f992504346905b6c2d4754907, type: 3}
 --- !u!65 &1485956815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4471,7 +4455,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 298.5, y: -199}
+  m_AnchoredPosition: {x: 280.1, y: -172.81}
   m_SizeDelta: {x: 500, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2134446716
@@ -4496,7 +4480,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0

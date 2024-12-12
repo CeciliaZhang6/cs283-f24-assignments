@@ -1,8 +1,8 @@
 ## Final Project Log
 
-Implemented: 
+Features Implemented: 
 - character controls: mouse input for camera/character rotation, jump & sprint with animation
-- set up farm area with soils, lake, chests. 
+- set up farm area with soils, la
 
 
 Credits: 
