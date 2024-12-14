@@ -2,7 +2,7 @@
 
 How to play: 
 
-Press W/S for moving. Use mouse movements for rotations. Space is jump, and shift for spint.
+Press W/S for moving. Use mouse movements for rotations. Space is jump, and shift for sprint.
 
 To farm, left click on soil to interact for planting seeds, watering soil, and harvesting. 
 
@@ -23,12 +23,13 @@ Features Implemented:
 - character controls - mouse input for camera/character rotation, jump & sprint with animation.
 - set up farm area with soils, left click on soils to plant/water/harvest. 
 - implemented randomness for type of plants.
-- implemented difference phases of plant growing.
+- implemented different phases of plant growing.
 - UI for harvest counter on top left.
-- Subtitle UI for player's action on bottom left. 
+- Subtitle UI for player's action on bottom left.
+- Escape for exiting executable (only works in executable, check email for Build folder).
 
 Other notes: 
-Game cover located in HelloUnity folder.
+Due to the upload limit at GitHub, I manually uploaded my major scripts and this README. The build folder's sharing link was sent over email. Thanks to Google Drive that allows me to upload. 
 
 Game demo link: 
 
