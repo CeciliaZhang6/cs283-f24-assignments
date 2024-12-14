@@ -1,8 +1,9 @@
 using UnityEngine;
+using System.Collections;
 
 public class SoilInteraction : MonoBehaviour
 {
-    public enum SoilState { Empty, Planted, Watered, Harvestable }
+    public enum SoilState { Empty, Planted, Dry, Watered, Harvestable }
     public SoilState CurrentState = SoilState.Empty;
 
     public GameObject ApplePlantPrefab;
@@ -10,14 +11,30 @@ public class SoilInteraction : MonoBehaviour
     public GameObject BananaPlantPrefab;
     public GameObject GoldenBananaPlantPrefab;
 
-    private GameObject plantedPlant; // Reference to the instantiated plant
-    private GameObject harvestable; // Reference to the spawned harvestable prefab
+    private GameObject plantedPlant; // instantiated plant
+    private GameObject harvestable; // spawned harvestable prefab
+    public float dryTime = 3.0f; 
+
+    public SubtitleManager subtitleManager;
 
     public void SetHarvestable(GameObject instance)
     {
         harvestable = instance;
     }
 
+    private IEnumerator StartDryingTimer()
+    {
+        yield return new WaitForSeconds(dryTime);
+
+        if (CurrentState == SoilState.Planted)
+        {
+            CurrentState = SoilState.Dry;
+
+            // subtitle message
+            subtitleManager.AddSubtitle("A soil has dried out.");
+            Debug.Log("Soil has dried out.");
+        }
+    }
 
     private void OnMouseDown()
     {
@@ -59,6 +76,7 @@ public class SoilInteraction : MonoBehaviour
                 plantedPlant.transform.position = newPos;
 
                 CurrentState = SoilState.Planted;
+                subtitleManager.AddSubtitle("You planted a seed.");
                 Debug.Log($"Planted a {selectedPlantPrefab.name}!");
             }
         }
@@ -68,9 +86,10 @@ public class SoilInteraction : MonoBehaviour
     {
         if (CurrentState == SoilState.Planted && plantedPlant != null)
         {
-            // Trigger growth logic in PlantGrowth
+            // growth logic in PlantGrowth
             plantedPlant.GetComponent<PlantGrowth>().WaterPlant();
             CurrentState = SoilState.Watered;
+            subtitleManager.AddSubtitle("You watered the soil.");
             Debug.Log("Watered the soil!");
         }
     }
@@ -79,14 +98,13 @@ public class SoilInteraction : MonoBehaviour
     {
         if (CurrentState == SoilState.Harvestable && transform.childCount > 0)
         {   
-            Destroy(plantedPlant); // Remove the growing plant
+            Destroy(plantedPlant); // remove the growing plant
             Debug.Log($"Harvested a {harvestable.name}!");
 
-            // Reference the HarvestUI
             HarvestUI ui = FindObjectOfType<HarvestUI>();
             if (ui != null)
             {
-                // Determine the type of fruit and update the UI
+                // find out the type of fruit and update the UI
                 if (harvestable.name.Contains("apple"))
                     ui.AddApple();
                 else if (harvestable.name.Contains("grape"))
@@ -101,8 +119,8 @@ public class SoilInteraction : MonoBehaviour
                 Debug.LogError("HarvestUI not found in the scene!");
             }
 
-            
-            // Destroy the first child (harvestable prefab)
+            subtitleManager.AddSubtitle("You harvested a plant.");
+            // destroy the first child (harvestable prefab)
             Destroy(harvestable);
 
             CurrentState = SoilState.Empty;
