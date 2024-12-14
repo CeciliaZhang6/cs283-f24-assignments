@@ -1,15 +1,40 @@
-## Final Project Log
+## Final Project
+
+How to play: 
+
+Press W/S for moving. Use mouse movements for rotations. Space is jump, and shift for spint.
+
+To farm, left click on soil to interact for planting seeds, watering soil, and harvesting. 
+
+When the plant seems to not be growing after waiting for a while, that implies the play needs to water the plant in order to keep it growing.
+
+Drop rates: 
+
+- Apple = 50%
+- Grape = 35%
+- Banana = 10%
+- Golden Banana = 5%
+
+How to build: 
+
+Everything was built in Build fodler, including executable named "HelloUnity". 
 
 Features Implemented: 
-- character controls: mouse input for camera/character rotation, jump & sprint with animation
-- set up farm area with soils, la
+- character controls - mouse input for camera/character rotation, jump & sprint with animation.
+- set up farm area with soils, left click on soils to plant/water/harvest. 
+- implemented randomness for type of plants.
+- implemented difference phases of plant growing.
+- UI for harvest counter on top left.
+- Subtitle UI for player's action on bottom left. 
 
+Other notes: 
+Game cover located in HelloUnity folder.
+
+Game demo link: 
 
 Credits: 
 
 soil texture: <a href="https://www.freepik.com/free-photo/rough-stone-wall-texture_1124387.htm#fromView=keyword&page=1&position=0&uuid=460b80eb-9094-4845-bc97-6cbacdb9fd9c">Image by freepik</a>
-
-soil 2 texture: https://freestocktextures.com/texture/ground-soil-dries,725.html
 
 apple texture: https://www.freepik.com/free-photo/close-up-texture-pomegranate-fruit_26212148.htm#fromView=keyword&page=1&position=0&uuid=1ba7b629-8c5d-4b39-96a8-e8435fa182f5
 
