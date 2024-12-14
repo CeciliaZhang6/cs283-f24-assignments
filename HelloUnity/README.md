@@ -2,7 +2,7 @@
 
 How to play: 
 
-Press W/S for moving. Use mouse movements for rotations. Space is jump, and shift for sprint.
+Press W/S for moving. Use mouse movements for rotations. Press space for jump, and hold shift for sprint.
 
 To farm, left click on soil to interact for planting seeds, watering soil, and harvesting. 
 
@@ -17,12 +17,12 @@ Drop rates:
 
 How to build: 
 
-Everything was built in Build fodler, including executable named "HelloUnity". 
+Everything was built in Build folder, including an executable named "HelloUnity". 
 
 Features Implemented: 
 - character controls - mouse input for camera/character rotation, jump & sprint with animation.
 - set up farm area with soils, left click on soils to plant/water/harvest. 
-- implemented randomness for type of plants.
+- implemented randomness for types of plants.
 - implemented different phases of plant growing.
 - UI for harvest counter on top left.
 - Subtitle UI for player's action on bottom left.
